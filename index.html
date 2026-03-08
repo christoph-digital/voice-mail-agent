@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#1a1a2e">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Voice Mail">
+  <title>CH Voice Mail</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>Voice Mail</h1>
+      <button id="settings-btn" class="icon-btn" aria-label="Einstellungen">&#9881;</button>
+    </header>
+
+    <main>
+      <div id="response-text" class="response-text"></div>
+
+      <button id="mic-btn" class="mic-btn idle" aria-label="Mikrofon">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/>
+          <path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/>
+        </svg>
+      </button>
+
+      <p id="status" class="status">Antippen zum Starten</p>
+      <p id="transcript" class="transcript"></p>
+
+      <div class="text-input-row">
+        <input type="text" id="text-input" placeholder="Oder hier tippen..." autocomplete="off">
+        <button id="send-btn" class="send-btn" aria-label="Senden">&#10148;</button>
+      </div>
+    </main>
+  </div>
+
+  <!-- Settings Overlay -->
+  <div id="settings-overlay" class="overlay">
+    <div class="overlay-content">
+      <h2>Einstellungen</h2>
+      <label for="api-key-input">OpenAI API Key</label>
+      <input type="password" id="api-key-input" placeholder="sk-..." autocomplete="off">
+      <div class="overlay-buttons">
+        <button id="save-key-btn" class="btn-primary">Speichern</button>
+        <button id="close-settings-btn" class="btn-secondary">Abbrechen</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

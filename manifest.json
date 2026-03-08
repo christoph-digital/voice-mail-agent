@@ -1,0 +1,22 @@
+{
+  "name": "CH Voice Mail",
+  "short_name": "Voice Mail",
+  "description": "Voice Mail Agent - E-Mails per Sprache verwalten",
+  "start_url": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#1a1a2e",
+  "theme_color": "#1a1a2e",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
